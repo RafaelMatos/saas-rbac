@@ -30,7 +30,7 @@ export async function getMembership(app: FastifyInstance) {
           },
         },
       },
-      async (request, reply) => {
+      async (request) => {
         const { slug } = request.params
 
         const { membership } = await request.getUserMembership(slug)
