@@ -6,9 +6,11 @@ export default function RootLayout({
   return (
     <div
       lang="en"
-      className="mii-h-screen flex flex-col items-center justify-center px-4"
+      className="min-h-screen flex flex-col items-center justify-center px-4"
     >
-      {children}
+      <div className="w-full max-w-xs">
+        {children}
+      </div>
     </div>
   )
 }

@@ -3,6 +3,11 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { Separator } from '@/components/ui/separator'
+
+import gitHubIcon from '@/assets/github-icon.svg'
+import Image from 'next/image'
+import GitHubIcon from '@/assets/github-icon'
 
 export default function SignInPage() {
   return (
@@ -25,6 +30,14 @@ export default function SignInPage() {
 
       <Button type="submit" className="w-full">
         Sign in with e-mail
+      </Button>
+
+      <Separator/>
+
+      <Button type="submit" variant='outline' className="w-full">
+        {/* <Image src={gitHubIcon} alt='' className='size-4 mr-2 dark:invert'/> */}
+        <GitHubIcon className="mr-2 size-4 dark:invert"/>
+        Sign in with Github
       </Button>
     </form>
   )
